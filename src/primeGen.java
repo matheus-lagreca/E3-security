@@ -3,9 +3,11 @@ import java.util.Random;
 public class primeGen {
     private BigInteger p;
     private BigInteger q;
+    private BigInteger two = BigInteger.ONE.add(BigInteger.ONE);
 
     public primeGen(){
-        genPrimeRandom1024();
+       //genPrimeRandom1024();
+       genPrimeRandom5();
     }
 
     public void genPrimeRandom1024(){
@@ -14,8 +16,39 @@ public class primeGen {
         q = BigInteger.probablePrime(1024,rand);
     }
 
+    public void genPrimeRandom5(){
+        Random rand = new Random();
+        p = BigInteger.probablePrime(6,rand);
+        q = BigInteger.probablePrime(6,rand);
+    }
 
 
+
+   /* public void genPrimeRandom5(){
+        Random rand = new Random();
+        boolean ok = false;
+        while (!ok) {
+            p = BigInteger.probablePrime(5, rand);
+            BigInteger ptest = (p.multiply(two)).min(BigInteger.ONE);
+            if (ptest.mod(p) == BigInteger.ONE) {
+                ok=true;
+            }
+        }
+            ok = false;
+
+        while (!ok) {
+            q = BigInteger.probablePrime(5,rand);
+            BigInteger qtest = (q.multiply(two)).min(BigInteger.ONE);
+            if (qtest.mod(q) == BigInteger.ONE) {
+                ok=true;
+            }
+        }
+
+
+    }
+
+*/
+//testar 2p-1 em Zn =1
 
 
     public BigInteger getP() {
