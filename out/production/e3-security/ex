@@ -1,0 +1,37 @@
+Fazer um programa que:
+
+Gera uma chave pública e uma chave privada para usar com RSA. Estas chave deve ter um número de bits superior a 1000. Imprimir a chave pública e chave privada.
+Dada uma mensagem M, cifre esta mensagem usando RSA com a chave pública gerada no item 1. Imprimir a mensagem cifrada C.
+Dada uma mensagem C, decifre esta mensagem usando RSA com a chave privada gerada no item 1. Imprimir a mensagem decifrada.
+
+O programa deve gerar, usando o pequeno teorema de Fermat, os números primos que comporão o módulo utilizado no RSA. Para cálculo do inverso de um número pode usar o algoritmo extendido de Euclides ou uma biblioteca pronta.
+
+1.  Como gerar um número primo usando Fermat.
+
+Algoritmo:
+Generate a large random prime, receives the size of the prime number in bits. E.g. prime p of 1024 bits (i.e. p ≈ 21024 )
+
+– Step 1:  Choose a random integer  p ∈ [21024, 21025-1]
+– Step 2:  Test if 2p-1 = 1 in Zp
+           If so, output  p  and stop.
+           If not, goto step 1.
+
+
+2. Algoritmo extendido de Euclides.
+
+Algoritmo extendido de Euclides:
+/* returns (d,a,b) where:
+   d = gcd(x,y) and
+   d == x*a + y*b */
+
+ExtendeEuclid (x,y) {
+  if (y == 0) return (x,1,0) ;
+  (d1,a1,b1) = ExtendedEuclid(y, x mod y);
+  d = d1;
+  a = b1;
+  b = a1 – (x div y) * b1;
+  return (d,a,b);
+}
+
+
+Submeter: Programa. Comentários no programa devem explicar como usar o programa. Trabalho Individual. Ponto extra, se fizer usando Curvas Elípticas.
