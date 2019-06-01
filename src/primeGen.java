@@ -13,14 +13,17 @@ public class primeGen {
     public void genPrimeRandom1024(){
         Random rand = new Random();
         p = BigInteger.probablePrime(1024,rand);
-        q = BigInteger.probablePrime(1024,rand);
+        do {
+            q = BigInteger.probablePrime(1024, rand);
+        } while(p.equals(q));
     }
 
+    //just in case
     public void genPrimeRandom5(){
         Random rand = new Random();
-        p = BigInteger.probablePrime(3,rand);
+        p = BigInteger.probablePrime(5,rand);
         do {
-            q = BigInteger.probablePrime(3, rand);
+            q = BigInteger.probablePrime(5, rand);
         }while (p.equals(q));
     }
 
