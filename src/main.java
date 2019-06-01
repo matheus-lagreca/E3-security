@@ -1,6 +1,7 @@
 import java.math.BigInteger;
 import java.security.PrivateKey;
 import java.util.Random;
+import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
@@ -54,29 +55,19 @@ public class main {
         do {
            e= geraBigRandom(eulerN);
             if((e.gcd(eulerN)).equals(BigInteger.ONE)){
-                ver1 = true;
                 //acha uma chave D
-                //tal que e*d == 1 mod eulerN
-                do{
-                  d= geraBigRandom(eulerN,e);
-                    //d*e ==1 em Z*n && d < eulerN
-                    BigInteger result = (d.multiply(e)).mod(eulerN);
-                    if(result.equals(BigInteger.ONE)){
-                        ver2=true;
-                    }
-                    //aqui
-
-                }while(!ver2);
+                d = e.modInverse(eulerN);
+                if(((d.multiply(e)).mod(eulerN)).equals(BigInteger.ONE)){
+                    //se o d*e ==1 em mod eulerN
+                    ver1 = true;
+                }
             }
-        }while(!ver1 && !ver2);
+        }while(!ver1);
 
-        System.out.println("e:" +e);
-        System.out.println("gcd: "+ e.gcd(eulerN));
-        System.out.println("d:" +d);
-        System.out.println("gcd: "+ d.gcd(eulerN));
-        System.out.println("gcd: "+ d.gcd(e));
-        System.out.println("count: "+ count);
-        System.out.println("sera?: "+ ((d.multiply(e)).mod(eulerN)));
+
+
+        menu();
+
     }
 
     public static BigInteger geraBigRandom(BigInteger eul){
@@ -84,15 +75,53 @@ public class main {
         BigInteger e;
         do {
             e = new BigInteger(5,rand);
-        }while(e.compareTo(eul)>0);
+        }while(e.compareTo(eul)>0 || e.equals(BigInteger.ONE));
         return e;
     }
-    public static BigInteger geraBigRandom(BigInteger eul, BigInteger e){
-        Random rand = new Random();
-        BigInteger d;
-        do {//gera d diferente de e
-            d = new BigInteger(5, rand);
-        }while(d.equals(e) || d.compareTo(eul) >0);
-        return d;
+
+
+    public static void  criptografar(String msg){
+        byte[] criptedMsg = msg.getBytes();
+    //pega string
+        //transforma em bytes
+        //
+        System.out.println();
+
+    }
+
+
+    public static void menu(){
+        int op =-1;
+        Scanner in = new Scanner(System.in);
+        String msg = "default";
+        String criptMsg = "";
+        while(op !=0){
+
+            System.out.println("Mensagem atual: " +msg);
+
+            System.out.println("Digite a opcao");
+            System.out.println("1: Escrever msg");
+            System.out.println("2: Criptografar msg");
+            System.out.println("3: Descriptografar msg");
+            System.out.println("0: SAIR");
+            op = in.nextInt();
+            switch(op){
+                case 1:
+                   msg = in.nextLine();
+                    System.out.println("Mensagem : "+ msg);
+                break;
+                case 2:
+                    criptografar(msg);
+                break;
+                case 3:
+
+                break;
+                case 0:
+                break;
+
+                default:
+                    System.out.println("errou");
+            }
+        }
     }
 }
