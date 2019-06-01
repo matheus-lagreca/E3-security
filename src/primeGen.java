@@ -18,8 +18,10 @@ public class primeGen {
 
     public void genPrimeRandom5(){
         Random rand = new Random();
-        p = BigInteger.probablePrime(6,rand);
-        q = BigInteger.probablePrime(6,rand);
+        p = BigInteger.probablePrime(3,rand);
+        do {
+            q = BigInteger.probablePrime(3, rand);
+        }while (p.equals(q));
     }
 
 

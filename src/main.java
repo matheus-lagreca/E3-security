@@ -11,6 +11,14 @@ public class main {
         System.out.println("should print 1");
         System.out.println(pg.getP().gcd(pg.getQ()));
 
-        System.out.println(EuclidesExt.ExtendEuclid(pg.getP(),pg.getQ()));
+        BigInteger [] seila = EuclidesExt.ExtendEuclid(pg.getP(),pg.getQ());
+        System.out.println("D: "+seila[0]);
+        System.out.println("A: "+seila[1]);
+        System.out.println("B: "+seila[2]);
+
+
+
+
+
     }
 }
