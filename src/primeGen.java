@@ -6,8 +6,8 @@ public class primeGen {
     private BigInteger two = BigInteger.ONE.add(BigInteger.ONE);
 
     public primeGen(){
-       //genPrimeRandom1024();
-       genPrimeRandom5();
+       genPrimeRandom1024();
+       //genPrimeRandom5();
     }
 
     public void genPrimeRandom1024(){

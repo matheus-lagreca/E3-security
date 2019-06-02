@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6550a686-346d-4a7a-aab1-181bd9361842" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primeGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primeGen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +33,7 @@
             <entry file="file://$PROJECT_DIR$/src/EuclidesExt.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="289">
-                  <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+                  <caret line="17" selection-start-line="17" selection-end-line="17" />
                 </state>
               </provider>
             </entry>
@@ -39,14 +41,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/primeGen.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+                <state relative-caret-position="153">
+                  <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1407#1408#0" expanded="true" />
-                    <element signature="e#1431#1432#0" expanded="true" />
-                    <element signature="e#1462#1463#0" expanded="true" />
-                    <element signature="e#1486#1487#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -59,11 +57,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="433">
-                  <caret line="95" column="31" lean-forward="true" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+                <state relative-caret-position="331">
+                  <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="method#geraBigRandom#0;class#main#0" />
                   </folding>
                 </state>
               </provider>
@@ -91,8 +88,8 @@
         <option value="$PROJECT_DIR$/src/links" />
         <option value="$PROJECT_DIR$/src/EuclidesExt.java" />
         <option value="$APPLICATION_CONFIG_DIR$/idea64.exe.vmoptions" />
-        <option value="$PROJECT_DIR$/src/primeGen.java" />
         <option value="$PROJECT_DIR$/src/main.java" />
+        <option value="$PROJECT_DIR$/src/primeGen.java" />
       </list>
     </option>
   </component>
@@ -108,8 +105,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -170,9 +167,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18283582" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18496802" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -181,7 +177,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32987553" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3629469" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.49729145" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.29469123" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -232,31 +228,26 @@
     <entry file="file://$PROJECT_DIR$/src/EuclidesExt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/primeGen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+        <state relative-caret-position="153">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1431#1432#0" expanded="true" />
-            <element signature="e#1462#1463#0" expanded="true" />
-            <element signature="e#1486#1487#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="95" column="31" lean-forward="true" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+        <state relative-caret-position="331">
+          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#geraBigRandom#0;class#main#0" />
           </folding>
         </state>
       </provider>

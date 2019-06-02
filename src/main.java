@@ -6,19 +6,13 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         System.out.println("Start");
-      /*  primeGen pg = new primeGen();
+        primeGen pg = new primeGen();
         System.out.println("P: " + pg.getP());
         System.out.println("Q: " + pg.getQ());
         System.out.println("P and Q have a 2^-60 chance of not being a prime number...");
 
         System.out.println("should print 1");
         System.out.println(pg.getP().gcd(pg.getQ()));
-
-        BigInteger [] seila = EuclidesExt.ExtendEuclid(pg.getP(),pg.getQ());
-        System.out.println("D: "+seila[0]);
-        //System.out.println("A: "+seila[1]);
-       // System.out.println("B: "+seila[2]);
-
 
         //Modulo de p e q
         BigInteger n = pg.getP().multiply(pg.getQ());
@@ -31,24 +25,30 @@ public class main {
         //selecionar a chave `e`
         //tal que 1< `e` < eulerN
         //e gdc(`e`, eulerN) ==1
-*/
+
         Random rand = new Random();
         BigInteger e= BigInteger.ONE;
         BigInteger d= BigInteger.ONE;
 
-
-        BigInteger p = BigInteger.ONE.add(BigInteger.ONE.add(BigInteger.ONE));//3
-        BigInteger q = BigInteger.TEN.add(BigInteger.ONE);
+/*
+        BigInteger p = new BigInteger("5");
+        BigInteger q = new BigInteger("11");
+        BigInteger N = p.multiply(q);
 
         BigInteger eulerN = (p.subtract(BigInteger.ONE)).multiply((q.subtract(BigInteger.ONE)));
-
+*//*
         System.out.println("p: "+p);
         System.out.println("q: "+q);
-        System.out.println("euler: "+eulerN);
+        System.out.println("euler: "+eulerN);*/
 
         boolean ver1 = false;//verificador para gerar chave E
         boolean ver2 = false;//verificador para gerar chave D
         int count =0;//so pra ver qnts vezes procura
+/*
+
+        BigInteger e = BigInteger.ZERO;
+        BigInteger d = BigInteger.ONE;
+*/
 
         //acha uma chave E
 
@@ -65,8 +65,19 @@ public class main {
         }while(!ver1);
 
 
+        System.out.println("e: "+e);
+        System.out.println("d: "+d);
 
-        menu();
+        System.out.println("test");
+        BigInteger t = new BigInteger("8");
+        BigInteger newT = t.modPow(e,n);
+        System.out.println("msg cripted     : "+ newT);
+        BigInteger nnt = newT.modPow(d,n);
+        System.out.println("msg desc        : "+ nnt);
+
+
+
+      //  menu();
 
     }
 
@@ -74,7 +85,7 @@ public class main {
         Random rand = new Random();
         BigInteger e;
         do {
-            e = new BigInteger(5,rand);
+            e = new BigInteger(1024,rand);
         }while(e.compareTo(eul)>0 || e.equals(BigInteger.ONE));
         return e;
     }
