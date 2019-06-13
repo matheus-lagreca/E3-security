@@ -1,11 +1,11 @@
 import java.math.BigInteger;
 import java.util.Random;
-public class primeGen {
+public class PrimeGen {
     private BigInteger p;
     private BigInteger q;
     private BigInteger two = BigInteger.ONE.add(BigInteger.ONE);
 
-    public primeGen(){
+    public PrimeGen(){
        genPrimeRandom1024();
        //genPrimeRandom5();
     }
